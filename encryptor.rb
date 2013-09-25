@@ -18,13 +18,13 @@ class Encryptor
     results.join
   end
 
+  alias_method :decrypt, :encrypt_string
+  
   def encrypt_letter(letter)
     lowercase_letter = letter.downcase
     cipher[lowercase_letter]
   end
 
-  def decrypt(string)
-    encrypt_string(string)
-  end
+  
 
 end
